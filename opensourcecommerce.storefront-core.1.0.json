@@ -1,6 +1,6 @@
 {
   "manifests": {
-    "opensourcecommerce/storefront-bundle": {
+    "opensourcecommerce/storefront-core": {
       "manifest": {
         "bundles": {
           "OpenSourceCommerce\\Storefront\\StorefrontBundle": [
@@ -21,7 +21,7 @@
           "executable": false
         }
       },
-      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff13"
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff14"
     }
   }
 }

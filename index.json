@@ -1,6 +1,6 @@
 {
   "recipes": {
-    "opensourcecommerce/storefront-bundle": [
+    "opensourcecommerce/storefront-core": [
       "1.0"
     ]
   },
@@ -8,7 +8,7 @@
   "is_contrib": true,
   "_links": {
     "repository": "github.com/OpenSourceCommerce/symfony-recipes",
-    "origin_template": "{package}:{version}@github.com/OpenSourceCommerce/symfony-recipes:master",
+    "origin_template": "{package}:{version}@github.com/OpenSourceCommerce/symfony-recipes:main",
     "recipe_template": "https://api.github.com/repos/OpenSourceCommerce/symfony-recipes/contents/{package_dotted}.{version}.json"
   }
 }
