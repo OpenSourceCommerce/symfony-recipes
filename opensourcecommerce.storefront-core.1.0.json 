@@ -9,6 +9,9 @@
         },
         "copy-from-recipe": {
           "config/": "%CONFIG_DIR%"
+        },
+        "env": {
+            "TEST_ENV": "OK"
         }
       },
       "files": {
@@ -21,7 +24,7 @@
           "executable": false
         }
       },
-      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff16"
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff17"
     }
   }
 }
