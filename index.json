@@ -4,11 +4,11 @@
       "1.0"
     ]
   },
-  "branch": "flex",
+  "branch": "main",
   "is_contrib": true,
   "_links": {
     "repository": "github.com/OpenSourceCommerce/symfony-recipes",
-    "origin_template": "{package}:{version}@github.com/OpenSourceCommerce/symfony-recipes:flex",
+    "origin_template": "{package}:{version}@github.com/OpenSourceCommerce/symfony-recipes:main",
     "recipe_template": "https://api.github.com/repos/OpenSourceCommerce/symfony-recipes/contents/{package_dotted}.{version}.json"
   }
 }
