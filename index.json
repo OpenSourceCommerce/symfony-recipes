@@ -1,0 +1,14 @@
+{
+  "recipes": {
+    "opensourcecommerce/storefront-core": [
+      "1.0"
+    ]
+  },
+  "branch": "flex",
+  "is_contrib": true,
+  "_links": {
+    "repository": "github.com/OpenSourceCommerce/symfony-recipes",
+    "origin_template": "{package}:{version}@github.com/OpenSourceCommerce/symfony-recipes:flex",
+    "recipe_template": "https://api.github.com/repos/OpenSourceCommerce/symfony-recipes/contents/{package_dotted}.{version}.json"
+  }
+}
