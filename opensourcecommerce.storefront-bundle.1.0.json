@@ -1,6 +1,6 @@
 {
   "manifests": {
-    "opensourcecommerce/storefront-core": {
+    "opensourcecommerce/storefront-bundle": {
       "manifest": {
         "bundles": {
           "OpenSourceCommerce\\Storefront\\StorefrontBundle": [

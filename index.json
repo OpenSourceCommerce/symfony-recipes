@@ -1,6 +1,6 @@
 {
   "recipes": {
-    "opensourcecommerce/storefront-core": [
+    "opensourcecommerce/storefront-bundle": [
       "1.0"
     ]
   },
