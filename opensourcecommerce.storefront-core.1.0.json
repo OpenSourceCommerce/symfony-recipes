@@ -1,0 +1,27 @@
+{
+  "manifests": {
+    "opensourcecommerce/storefront-core": {
+      "manifest": {
+        "bundles": {
+          "OpenSourceCommerce\\Storefront\\StorefrontBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        }
+      },
+      "files": {
+        "config/packages/test123.yaml": {
+          "contents": [
+            "acme_private:",
+            "    encode: true",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff12"
+    }
+  }
+}
