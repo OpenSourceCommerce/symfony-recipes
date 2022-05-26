@@ -51,10 +51,11 @@
             "  cms_connector: strapi",
             "  checkout_connector: shopware6",
             "  image_host: /",
-            "  item_per_page: 32",
+            "  item_per_page: 16",
             "  languages:",
             "    de: DE",
-            "  default_language: de"
+            "    en: EN",
+            "  default_language: en"
           ],
           "executable": false
         }
