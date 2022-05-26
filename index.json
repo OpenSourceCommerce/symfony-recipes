@@ -9,6 +9,6 @@
   "_links": {
     "repository": "github.com/OpenSourceCommerce/symfony-recipes",
     "origin_template": "{package}:{version}@github.com/OpenSourceCommerce/symfony-recipes:main",
-    "recipe_template": "https://api.github.com/repos/OpenSourceCommerce/symfony-recipes/contents/{package_dotted}.{version}.json"
+    "recipe_template": "https://raw.githubusercontent.com/OpenSourceCommerce/symfony-recipes/main/{package_dotted}.{version}.json"
   }
 }
