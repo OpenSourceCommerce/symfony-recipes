@@ -1,7 +1,7 @@
 {
   "recipes": {
     "opensourcecommerce/storefront-core": [
-      "dev-main"
+      "1.0"
     ]
   },
   "branch": "main",
