@@ -1,0 +1,65 @@
+{
+  "manifests": {
+    "opensourcecommerce/storefront-core": {
+      "manifest": {
+        "bundles": {
+          "OpenSourceCommerce\\Storefront\\StorefrontBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        },
+        "env": {
+          "CONNECTOR": "",
+          "CMS_CONNECTOR": "",
+          "CHECKOUT_CONNECTOR": "",
+          "ELASTICSEARCH_URL": "",
+          "IMAGE_HOST": "",
+          "SHOPWARE_HOST": "",
+          "SHOPWARE_TOKEN": "",
+          "STRAPI_HOST": "",
+          "STRAPI_IMAGE_HOST": "",
+          "MAKAIRA_TOKEN": "",
+          "MAKAIRA_NONCE": "",
+          "MAKAIRA_INSTANCE": "",
+          "MAKAIRA_HOST": "",
+          "PAGINATOR_PER_PAGE": "12"
+        }
+      },
+      "files": {
+        "config/packages/storefront.yaml": {
+          "contents": [
+            "storefront:",
+            "  connectors:",
+            "    elasticsearch:",
+            "      url: '%env(ELASTICSEARCH_URL)%'",
+            "    shopware6:",
+            "      url: '%env(SHOPWARE_HOST)%'",
+            "      token: '%env(SHOPWARE_TOKEN)%'",
+            "    #    makaira:",
+            "    #      url: '%env(MAKAIRA_HOST)%'",
+            "    #      token: '%env(MAKAIRA_TOKEN)%'",
+            "    #      nonce: '%env(MAKAIRA_NONCE)%'",
+            "    #      instance: '%env(MAKAIRA_INSTANCE)%'",
+            "    strapi:",
+            "      url: '%env(STRAPI_HOST)%'",
+            "  connector: elasticsearch",
+            "  #  connector: App\\Connector\\Override\\OverrideConnector",
+            "  #  connector: App\\Connector\\MyOwn\\MyOwnConnector",
+            "  #  connector: App\\Connector\\Decorated\\DecoratedConnector",
+            "  cms_connector: strapi",
+            "  checkout_connector: shopware6",
+            "  image_host: /",
+            "  item_per_page: 32",
+            "  languages:",
+            "    de: DE",
+            "  default_language: de"
+          ],
+          "executable": false
+        }
+      },
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff19"
+    }
+  }
+}
