@@ -37,17 +37,17 @@
             "    shopware6:",
             "      url: '%env(SHOPWARE_HOST)%'",
             "      token: '%env(SHOPWARE_TOKEN)%'",
-            "    #    makaira:",
-            "    #      url: '%env(MAKAIRA_HOST)%'",
-            "    #      token: '%env(MAKAIRA_TOKEN)%'",
-            "    #      nonce: '%env(MAKAIRA_NONCE)%'",
-            "    #      instance: '%env(MAKAIRA_INSTANCE)%'",
+            "#    makaira:",
+            "#      url: '%env(MAKAIRA_HOST)%'",
+            "#      token: '%env(MAKAIRA_TOKEN)%'",
+            "#      nonce: '%env(MAKAIRA_NONCE)%'",
+            "#      instance: '%env(MAKAIRA_INSTANCE)%'",
             "    strapi:",
             "      url: '%env(STRAPI_HOST)%'",
             "  connector: elasticsearch",
-            "  #  connector: App\\Connector\\Override\\OverrideConnector",
-            "  #  connector: App\\Connector\\MyOwn\\MyOwnConnector",
-            "  #  connector: App\\Connector\\Decorated\\DecoratedConnector",
+            "#  connector: App\\Connector\\Override\\OverrideConnector",
+            "#  connector: App\\Connector\\MyOwn\\MyOwnConnector",
+            "#  connector: App\\Connector\\Decorated\\DecoratedConnector",
             "  cms_connector: strapi",
             "  checkout_connector: shopware6",
             "  image_host: /",
@@ -60,7 +60,7 @@
           "executable": false
         }
       },
-      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff18"
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff19"
     }
   }
 }
