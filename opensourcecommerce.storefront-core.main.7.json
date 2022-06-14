@@ -1,0 +1,82 @@
+{
+  "manifests": {
+    "opensourcecommerce/storefront-core": {
+      "manifest": {
+        "bundles": {
+          "OpenSourceCommerce\\Storefront\\StorefrontBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        },
+        "copy-from-packages": {
+          "config/packages/storefront-test.yaml": "%CONFIG_DIR%/packages/storefront-test.yaml"
+        },
+        "env": {
+          "CONNECTOR": "elasticsearch",
+          "CMS_CONNECTOR": "strapi",
+          "CHECKOUT_CONNECTOR": "shopware6",
+          "ELASTICSEARCH_HOST": "",
+          "ELASTICSEARCH_URL": "",
+          "MEDIA_HOST_DOMAIN": "",
+          "MEDIA_HOST_REGEX": "",
+          "SHOPWARE_HOST": "",
+          "SHOPWARE_TOKEN": "",
+          "STRAPI_HOST": "",
+          "STRAPI_IMAGE_HOST": "",
+          "MAKAIRA_TOKEN": "",
+          "MAKAIRA_NONCE": "",
+          "MAKAIRA_INSTANCE": "",
+          "MAKAIRA_HOST": "",
+          "PAGINATOR_PER_PAGE": "32"
+        }
+      },
+      "files": {
+        "config/packages/storefront.yaml": {
+          "contents": [
+            "storefront:",
+            "  connectors:",
+            "    elasticsearch:",
+            "      url: '%env(ELASTICSEARCH_URL)%'",
+            "    shopware6:",
+            "      url: '%env(SHOPWARE_HOST)%'",
+            "      token: '%env(SHOPWARE_TOKEN)%'",
+            "#    makaira:",
+            "#      url: '%env(MAKAIRA_HOST)%'",
+            "#      token: '%env(MAKAIRA_TOKEN)%'",
+            "#      nonce: '%env(MAKAIRA_NONCE)%'",
+            "#      instance: '%env(MAKAIRA_INSTANCE)%'",
+            "    strapi:",
+            "      url: '%env(STRAPI_HOST)%'",
+            "  connector: '%env(CONNECTOR)%'",
+            "  cms_connector: '%env(CMS_CONNECTOR)%'",
+            "  checkout_connector: '%env(CHECKOUT_CONNECTOR)%'",
+            "  item_per_page: 16",
+            "  locales:",
+            "    de: DE",
+            "    en: EN",
+            "  default_locale: en",
+            "  locale_detector: prefix",
+            "  # url_generator supported for",
+            "  # - nice: used when name of en and de or what ever... is different",
+            "  # - prefix: used when name of en and de or what ever... is same",
+            "  url_generator: prefix",
+            "  refactors:",
+            "    image_url:",
+            "      class: OpenSourceCommerce\\Storefront\\Refactor\\ImageRefactor",
+            "      arguments:",
+            "        - '%env(MEDIA_HOST_DOMAIN)%'",
+            "  #      - '%env(MEDIA_HOST_REGEX)%'",
+            "    url_generator:",
+            "      class: OpenSourceCommerce\\Storefront\\Refactor\\UrlGeneratorRefactor",
+            "      arguments:",
+            "        - '@storefront.service.url_generator.prefix'"
+          ],
+          "executable": false
+        }
+      },
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff21"
+    }
+  }
+}
