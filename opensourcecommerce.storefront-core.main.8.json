@@ -29,7 +29,9 @@
           "MAKAIRA_NONCE": "",
           "MAKAIRA_INSTANCE": "",
           "MAKAIRA_HOST": "",
-          "PAGINATOR_PER_PAGE": "32"
+          "PAGINATOR_PER_PAGE": "32",
+          "ELASTICSEARCH_PRODUCT_INDEX": "products",
+          "ELASTICSEARCH_CATEGORY_INDEX": "categories"
         }
       },
       "files": {
