@@ -1,0 +1,81 @@
+{
+  "manifests": {
+    "opensourcecommerce/storefront-core": {
+      "manifest": {
+        "bundles": {
+          "OpenSourceCommerce\\Storefront\\StorefrontBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        },
+        "copy-from-packages": {
+          "config/packages/storefront-test.yaml": "%CONFIG_DIR%/packages/storefront-test.yaml"
+        },
+        "env": {
+          "CONNECTOR": "elasticsearch",
+          "CMS_CONNECTOR": "strapi",
+          "CHECKOUT_CONNECTOR": "shopware6",
+          "ELASTICSEARCH_HOST": "",
+          "ELASTICSEARCH_URL": "",
+          "MEDIA_HOST_DOMAIN": "",
+          "MEDIA_HOST_REGEX": "",
+          "SHOPWARE_HOST": "",
+          "SHOPWARE_TOKEN": "",
+          "STRAPI_HOST": "",
+          "STRAPI_IMAGE_HOST": "",
+          "MAKAIRA_TOKEN": "",
+          "MAKAIRA_NONCE": "",
+          "MAKAIRA_INSTANCE": "",
+          "MAKAIRA_HOST": "",
+          "OXID_HOST": "",
+          "PAGINATOR_PER_PAGE": "30",
+          "ELASTICSEARCH_PRODUCT_INDEX": "products",
+          "ELASTICSEARCH_CATEGORY_INDEX": "categories"
+        }
+      },
+      "files": {
+        "config/packages/storefront.yaml": {
+          "contents": [
+            "storefront:",
+            "  connectors:",
+            "    elasticsearch:",
+            "      url: '%env(ELASTICSEARCH_URL)%'",
+            "    shopware6:",
+            "      url: '%env(SHOPWARE_HOST)%'",
+            "      token: '%env(SHOPWARE_TOKEN)%'",
+            "#    makaira:",
+            "#      url: '%env(MAKAIRA_HOST)%'",
+            "#      token: '%env(MAKAIRA_TOKEN)%'",
+            "#      nonce: '%env(MAKAIRA_NONCE)%'",
+            "#      instance: '%env(MAKAIRA_INSTANCE)%'",
+            "#    oxid:",
+            "#      url: '%env(OXID_HOST)%'",
+            "#      token_expires: 3600",
+            "    strapi:",
+            "      url: '%env(STRAPI_HOST)%'",
+            "  connector: '%env(CONNECTOR)%'",
+            "  cms_connector: '%env(CMS_CONNECTOR)%'",
+            "  checkout_connector: '%env(CHECKOUT_CONNECTOR)%'",
+            "  item_per_page: 30",
+            "  locales:",
+            "    de: DE",
+            "    en: EN",
+            "  default_locale: en",
+            "  locale_detector: prefix",
+            "  # url_generator supported for",
+            "  # - nice: used when name of en and de or what ever... is different",
+            "  # - prefix: used when name of en and de or what ever... is same",
+            "  # - prefix_nice: mixed of above",
+            "  url_generator: prefix_nice",
+            "  media_host_domain: '%env(MEDIA_HOST_DOMAIN)%'",
+            "#  media_host_regex: '%env(MEDIA_HOST_REGEX)%'"
+          ],
+          "executable": false
+        }
+      },
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff23"
+    }
+  }
+}
